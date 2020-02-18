@@ -1,8 +1,8 @@
 <?php
 
-spl_autoload_register(function ($class_name){
-    include  $class_name . '.php';
-});
+require_once 'app/pages/database/ConnectToDatabase.php';
+require_once 'app/pages/database/Tasklists.php';
+require_once 'app/pages/controllers/tasklistsController.php';
 
 
 

@@ -1,56 +1,10 @@
 <?php
-use app\pages\Pages;
 include 'init.php';
+$tasklist = show();
 
-$result = new Pages('localhost','root','','todolist_dvc');
-$tasklist = $result->index();
+require_once 'app/pages/template/header.php';
 ?>
-<!doctype html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--STYLESHEETS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="app/assets/css/stylesheet.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
-
-    <!--FONT AWESOME-->
-    <script src="https://kit.fontawesome.com/7e31d4959b.js" crossorigin="anonymous"></script>
-    <script src="app/assets/js/jquery.js"></script>
-
-    <title>To-Do list DVC</title>
-</head>
-<body>
-
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#" onclick="topFunction()">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">link</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<div class="container col-12">
     <div class="col-12 col-md-8 col-lg-4 list">
         <table class="table">
             <thead>
@@ -78,7 +32,7 @@ $tasklist = $result->index();
 
 
 <div class="button-container">
-    <a href="#"><button type="button" class="btn" data-toggle="modal" data-target="#addModal" ><i class="fas fa-plus-circle"></button></i></a>
+    <a href="#"><button type="button" class="btn text-secondary" data-toggle="modal" data-target="#addModal" ><i class="fas fa-plus-circle"></button></i></a>
 </div>
 
 <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
@@ -108,8 +62,4 @@ $tasklist = $result->index();
     </div>
 </div>
 
-
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
-</html>
+<?php require_once 'app/pages/template/footer.php';

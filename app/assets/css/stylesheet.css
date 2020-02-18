@@ -79,7 +79,7 @@ CONTAINER
     animation: fade-slide-left 2s cubic-bezier(0, .45, 0, 1) forwards;
     position: absolute;
     bottom: 1rem;
-    left: 80%;
+    left: 70%;
     transform: translate(0%, 0%);
 }
  .fa-plus-circle {
