@@ -3,13 +3,14 @@
 namespace app\pages\database;
 
 use PDO;
+use app\pages\database\Tasklists;
 
-class connectToDatabase {
-
+class ConnectToDatabase {
     private $_servername;
     private $_username;
     private $_password;
     private $_dbName;
+    protected $connect;
 
     public function __construct($servername, $username, $password, $dbName)
     {
@@ -17,8 +18,11 @@ class connectToDatabase {
         $this->_username = $username;
         $this->_password = $password;
         $this->_dbName = $dbName;
+        // To make the method self-invoking when instantiating class.
+        $this->connect = $this->connectToDatabase();
     }
 
+    /*Method to connect to database*/
     public function connectToDatabase(){
         try {
             $conn = new PDO("mysql:host=$this->_servername;dbname=$this->_dbName", $this->_username, $this->_password);
@@ -29,5 +33,7 @@ class connectToDatabase {
         {
             echo "Connection failed: " . $e->getMessage();
         }
+
+        return $conn;
     }
 }

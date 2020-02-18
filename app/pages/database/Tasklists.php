@@ -2,14 +2,20 @@
 
 namespace app\pages\database;
 
-use app\pages\database\connectToDatabase;
 
-class tasks {
+class Tasklists extends ConnectToDatabase{
+    private $_task;
 
-    public function __construct()
-    {
-        $connectToDatabase = new connectToDatabase('localhost','root', "", 'todolist_dvc');
+    public function __construct($servername, $username, $password, $dbName)
+     {
+      parent::__construct($servername, $username, $password, $dbName);
     }
 
-    public function getTaskList
+    //Method to get an array of the tasklist-table.
+    public function getTaskList(){
+        $stmt = $this->connect->prepare("SELECT * FROM tasklists");
+        $stmt->execute();
+        $this->_task = $stmt->fetchAll();
+        return $this->_task;
+    }
 }
