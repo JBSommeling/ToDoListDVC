@@ -4,7 +4,7 @@ include 'init.php';
 
 $result = new Pages('localhost','root','','todolist_dvc');
 $tasklist = $result->index();
-    ?>
+?>
 <!doctype html>
 <html lang="nl">
 <head>
@@ -20,6 +20,7 @@ $tasklist = $result->index();
 
     <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/7e31d4959b.js" crossorigin="anonymous"></script>
+    <script src="app/assets/js/jquery.js"></script>
 
     <title>To-Do list DVC</title>
 </head>
@@ -77,10 +78,37 @@ $tasklist = $result->index();
 
 
 <div class="button-container">
-    <i class="fas fa-plus-circle"><a href="#"></a></i>
+    <a href="#"><button type="button" class="btn" data-toggle="modal" data-target="#addModal" ><i class="fas fa-plus-circle"></button></i></a>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="<?php echo htmlspecialchars('app/pages/Pages.php')?>" method="POST">
+                    <div class="form-group">
+                        <label for="list_name">Naam van lijst:</label>
+                        <input type="text" id="list_name" name="list_name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" id="create_button" value="Maken">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>

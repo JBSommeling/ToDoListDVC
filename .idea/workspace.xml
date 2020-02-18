@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfa97a2e-6cdb-4c17-8b3b-617bf261c8e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pages/database/Tasklists.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/css/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/database/connectToDatabase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/database/ConnectToDatabase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/database/tasks.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/js/script.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/init.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -65,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581952596723</updated>
       <workItem from="1581952598355" duration="3243000" />
-      <workItem from="1582011545241" duration="17742000" />
+      <workItem from="1582011545241" duration="22887000" />
     </task>
     <servers />
   </component>
