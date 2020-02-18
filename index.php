@@ -1,3 +1,5 @@
+<?php require_once 'init.php'?>
+
 <!doctype html>
 <html lang="nl">
 <head>
@@ -8,6 +10,9 @@
     <!--STYLESHEETS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="app/assets/css/stylesheet.css">
+
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/7e31d4959b.js" crossorigin="anonymous"></script>
 
     <title>To-Do list DVC</title>
 </head>
@@ -24,25 +29,27 @@
                     <a class="nav-link" href="#" onclick="topFunction()">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Profiel</a>
+                    <a class="nav-link" href="#">link</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Vaardigheden</a>
+                    <a class="nav-link" href="#">link</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Opleidingen</a>
+                    <a class="nav-link" href="#">link</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Werkervaring</a>
+                    <a class="nav-link" href="#">link</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Competenties</a>
+
                 </li>
             </ul>
         </div>
     </nav>
 <div class="container col-12">
-    
+
+</div>
+<div class="button-container">
+    <i class="fas fa-plus-circle"><a href="#"></a></i>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
