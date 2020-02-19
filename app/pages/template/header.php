@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--STYLESHEETS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="app/assets/css/stylesheet.css">
+    <link rel="stylesheet" href="../../assets/css/stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 
     <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/7e31d4959b.js" crossorigin="anonymous"></script>
-    <script src="app/assets/js/jquery.js"></script>
+    <script src="../../assets/js/jquery.js"></script>
 
     <title>To-Do list DVC</title>
 </head>
@@ -26,7 +26,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#" onclick="topFunction()">Home</a>
+                <a class="nav-link" href="../../../index.php">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">link</a>

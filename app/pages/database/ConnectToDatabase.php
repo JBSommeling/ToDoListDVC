@@ -1,4 +1,6 @@
 <?php
+
+// Function to connect to Database.
 function connectToDatabase(){
     $servername = "localhost";
     $username = "root";

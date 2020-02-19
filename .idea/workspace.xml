@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfa97a2e-6cdb-4c17-8b3b-617bf261c8e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/pages/controller/show_tasklists_data.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/css/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/Pages.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/View.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/database/ConnectToDatabase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/database/Tasklists.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/template/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/template/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/controllers/tasklistsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/database/ConnectToDatabase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/database/ConnectToDatabase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/database/Tasklists.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/database/Tasklists.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pages/template/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/template/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/init.php" afterDir="false" />
@@ -47,7 +46,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../todolist" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StemWijzer" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -71,6 +70,9 @@
       <workItem from="1581952598355" duration="3243000" />
       <workItem from="1582011545241" duration="22887000" />
       <workItem from="1582051978722" duration="2530000" />
+      <workItem from="1582098301567" duration="717000" />
+      <workItem from="1582103391726" duration="915000" />
+      <workItem from="1582106876900" duration="4502000" />
     </task>
     <servers />
   </component>
@@ -78,26 +80,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="725" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581953115976">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="580" y="257" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582107743997">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="580" y="257" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1582107743997" />
     <state x="725" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581953115976" />
     <state x="403" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582027845819">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="403" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582027845819" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1582032480047">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1582111380526">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582032480047" />
-    <state x="794" y="444" key="NewPhpFileDialog" timestamp="1582052659813">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582111380526" />
+    <state x="635" y="352" key="NewPhpFileDialog" timestamp="1582107658517">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="635" y="352" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582027801171" />
+    <state x="635" y="352" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1582107658517" />
     <state x="794" y="444" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582052659813" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1582052040204">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="525" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1582098362153">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="525" y="273" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582098362153" />
     <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582052040204" />
     <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1582027681806">
       <screen x="0" y="0" width="1536" height="824" />
