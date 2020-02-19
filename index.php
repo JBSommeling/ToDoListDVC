@@ -60,10 +60,10 @@ include 'app/pages/controller/show_tasklists_data.php';
             <tbody>
             <?php foreach ($tasklist as $task) {?>
             <tr>
-                <th scope="row"><?php echo $task['list_id'] ?></th>
+                <th scope="row"><?php echo $count; $count++ ?></th>
                 <td><?php echo $task['list_name'] ?></td>
                 <td>
-                    <a href=""><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
+                    <a href="app/pages/view/edit_tasklist.php?id=<?php echo $task['list_id']; ?>"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
                     <a href=""><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
                 </td>
             </tr>

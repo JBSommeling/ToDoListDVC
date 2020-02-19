@@ -17,3 +17,11 @@ function createTasklist($name){
     $stmt = $conn->prepare($sql);
     $stmt->execute([':list_name' => $name]);
 }
+
+function editTasklist($id, $name){
+    $conn = ConnectToDatabase();
+
+    $sql = 'UPDATE tasklists SET list_name = :name WHERE list_id = :id';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([":name" => $name, ":id" => $id]);
+}

@@ -1,13 +1,13 @@
 <?php
 require_once '../../../init.php';
-include '../controller/add_tasklists_data.php';
+include '../controller/edit_tasklists_data.php';
 
 require_once '../template/header.php';
 ?>
 
 <div class="col-12 col-md-8 col-lg-4 wrapper">
-    <h3>Lijst toevoegen</h3>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <h3>Lijst wijzigen</h3>
+    <form method="post">
         <div class="form-group">
             <label for="tasklist_name">Naam van de lijst:<span class="text-danger">* <?php echo $nameErr; ?></span></label>
             <input type="text" class="form-control" name="tasklist_name" id="tasklist_name" value="<?php echo $name ?>">
