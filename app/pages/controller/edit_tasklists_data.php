@@ -5,31 +5,19 @@ $nameErr = "";
 $validate = false;
 
 $id = $_GET['id'];
+$oldVal = getTasklistById($id);
 
+$fields = array(
+    'tasklist_name' => ''
+);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $validate = true;
-    if (empty($_POST['tasklist_name'])) {
-        $nameErr = 'Dit is een verplicht veld!';
-        $validate = false;
-    } else {
-        $name = formVal($_POST['tasklist_name']);
-        if (!preg_match("/^[a-zA-Z- ]*$/", $name)) {
-            $nameErr = 'Alleen letters zijn toegestaan.';
-            $name = "";
-            $validate = false;
-        }
-    }
-}
+$fieldErr = array(
+    'tasklist_name' => ""
+);
 
-function formVal($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
+$result = checkFields($fields, $fieldErr);
 
-if ($validate) {
-    editTasklist($id, $name);
+if ($result['validate']) {
+    editTasklist($id, $result['fields']['tasklist_name']);
     header('location: ../../../index.php');
 }

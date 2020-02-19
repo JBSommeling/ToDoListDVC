@@ -10,6 +10,15 @@ function getTasklists(){
     return $stmt->fetchAll();
 }
 
+function getTasklistById($id){
+    $conn = ConnectToDatabase();
+
+    $sql = 'SELECT * FROM tasklists WHERE list_id = :id';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([':id' => $id]);
+    return $stmt->fetch();
+}
+
 function createTasklist($name){
     $conn = ConnectToDatabase();
 

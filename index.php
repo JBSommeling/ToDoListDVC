@@ -48,36 +48,40 @@ include 'app/pages/controller/show_tasklists_data.php';
         </div>
     </nav>
 <div class="container col-12">
-    <div class="col-12 col-md-8 col-lg-4 wrapper">
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Naam</th>
-                <th scope="col">Acties</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($tasklist as $task) {?>
-            <tr>
-                <th scope="row"><?php echo $count; $count++ ?></th>
-                <td><?php echo $task['list_name'] ?></td>
-                <td>
-                    <a href="app/pages/view/edit_tasklist.php?id=<?php echo $task['list_id']; ?>"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
-                    <a href=""><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
-                </td>
-            </tr>
-            <?php } ?>
-            </tbody>
-        </table>
+    <div class="row">
+        <div class="col-12 col-md-8 col-lg-5 list">
+            <div class="button-container">
+                <a href="app/pages/view/add_tasklist.php"><button type="button" class="btn text-secondary"><i class="fas fa-plus-circle"></button></i></a>
+            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Naam</th>
+                    <th scope="col">Acties</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($tasklist as $task) {?>
+                <tr>
+                    <th scope="row"><?php echo $count; $count++ ?></th>
+                    <td><a href="" class="btn btn-transparent"><?php echo $task['list_name']; ?></a></td>
+                    <td>
+                        <a href="app/pages/view/edit_tasklist.php?id=<?php echo $task['list_id']; ?>"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
+                        <a href=""><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
+                    </td>
+                </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+        </div>
     </div>
+
 </div>
 
-    <div class="button-container">
-        <a href="app/pages/view/add_tasklist.php"><button type="button" class="btn text-secondary"><i class="fas fa-plus-circle"></button></i></a>
-    </div>
 
 
+    <script src="app/assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
