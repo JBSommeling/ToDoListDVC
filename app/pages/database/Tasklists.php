@@ -10,6 +10,7 @@ function getTasklists(){
     return $stmt->fetchAll();
 }
 
+// Function to get the Tasklist by Id.
 function getTasklistById($id){
     $conn = ConnectToDatabase();
 
@@ -19,6 +20,7 @@ function getTasklistById($id){
     return $stmt->fetch();
 }
 
+// Function to create a Tasklist.
 function createTasklist($name){
     $conn = ConnectToDatabase();
 
@@ -27,6 +29,7 @@ function createTasklist($name){
     $stmt->execute([':list_name' => $name]);
 }
 
+// Function to edit a Tasklist.
 function editTasklist($id, $name){
     $conn = ConnectToDatabase();
 
