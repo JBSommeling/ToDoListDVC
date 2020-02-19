@@ -15,7 +15,6 @@ function checkFields($fieldsArr, $errorArr) {
             } // Checks if only letters are used.
             else {
                 $fieldsArr[$key] = formVal($_POST[$key]);
-
                 if (!preg_match("/^[a-zA-Z- ]*$/", $fieldsArr[$key])) {
                     $errorArr[$key] = 'Alleen letters zijn toegestaan.';
                     $fieldsArr[$key] = "";
