@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfa97a2e-6cdb-4c17-8b3b-617bf261c8e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/controller/add_tasklists_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/controller/tasklists/add_tasklists_data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/controller/commonUsedFunctions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/common/commonFunctions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/controller/edit_tasklists_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/controller/tasklists/edit_tasklists_data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/controller/show_tasklists_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/controller/tasklists/show_tasklists_data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/database/Tasklists.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/database/Tasklists.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/view/add_tasklist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/view/add_tasklist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/view/edit_tasklist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/view/edit_tasklist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/init.php" afterDir="false" />
-    </list>
+    <list default="true" id="dfa97a2e-6cdb-4c17-8b3b-617bf261c8e3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,11 +82,12 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="403" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582027845819" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1582111380526">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="686" y="212" key="FileChooserDialogImpl" timestamp="1582224334585">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582032480047" />
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582111380526" />
+    <state x="686" y="212" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582224334585" />
     <state x="794" y="444" key="NewPhpFileDialog" timestamp="1582222348300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -63,8 +63,6 @@ CONTAINER
 .container {
     height: 90%;
     width: 98%;
-    background-position: top;
-    background-size: cover;
     clip-path: polygon(100% 0, 100% 74%, 36% 96%, 0 96%, 0 0);
     position: relative;
 }
@@ -79,7 +77,6 @@ CONTAINER
 /*=============================
 TASKLIST LIST
 =============================*/
-
 
 .button-container {
     animation: fade-slide-right 2s cubic-bezier(0, .45, 0, 1) forwards;
