@@ -1,8 +1,8 @@
 <?php
 require_once '../../../init.php';
-include '../controller/add_tasklists_data.php';
+include ROOTPATH.'/app/pages/controller/tasklists/add_tasklists_data.php';
 
-require_once '../template/header.php';
+require_once ROOTPATH.'/app/pages/template/header.php';
 ?>
 
 <div class="col-12 col-md-8 col-lg-4 list">
@@ -19,5 +19,5 @@ require_once '../template/header.php';
 </div>
 
 <?php
-require_once '../template/footer.php';
+require_once ROOTPATH.'app/pages/template/footer.php';
 ?>

@@ -10,7 +10,8 @@ function getTasklists(){
     return $stmt->fetchAll();
 }
 
-// Function to get the Tasklist by Id.
+/* Function to get the Tasklist by Id.
+@param - $id = the id of the to be fetched tasklist*/
 function getTasklistById($id){
     $conn = ConnectToDatabase();
 
@@ -20,7 +21,8 @@ function getTasklistById($id){
     return $stmt->fetch();
 }
 
-// Function to create a Tasklist.
+/* Function to create a Tasklist.
+@param - name = new name of the to be created tasklist*/
 function createTasklist($name){
     $conn = ConnectToDatabase();
 
@@ -29,11 +31,23 @@ function createTasklist($name){
     $stmt->execute([':list_name' => $name]);
 }
 
-// Function to edit a Tasklist.
+/* Function to edit a tasklist
+@param - id = id of the tasklist to be edited.
+@param - name = new name of the to be edited tasklist*/
 function editTasklist($id, $name){
     $conn = ConnectToDatabase();
 
     $sql = 'UPDATE tasklists SET list_name = :name WHERE list_id = :id';
     $stmt = $conn->prepare($sql);
     $stmt->execute([":name" => $name, ":id" => $id]);
+}
+
+/* Function to delete a tasklist
+@param - id = id of the tasklist to be deleted.*/
+function deleteTasklist($id){
+    $conn = ConnectToDatabase();
+
+    $sql = 'DELETE FROM tasklists WHERE list_id = :id';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(['id' => $id]);
 }

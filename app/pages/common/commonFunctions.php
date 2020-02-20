@@ -26,7 +26,8 @@ function checkFields($fieldsArr, $errorArr) {
     }
 }
 
-// Function to trim, strip and convert to htmlspecialchars the $data variable.
+/* Function to trim, strip and convert to htmlspecialchars the $data variable.
+@param - data = the data to be stripped, trimmed and converted*/
 function formVal($data) {
     $data = trim($data);
     $data = stripslashes($data);
