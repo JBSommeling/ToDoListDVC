@@ -69,7 +69,7 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
                     <td><a href="#" class="btn btn-transparent"><?php echo $task['list_name']; ?></a></td>
                     <td>
                         <a href="app/pages/view/edit_tasklist.php?id=<?php echo $task['list_id']; ?>"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
-                        <a href="app/pages/controller/tasklists/delete_tasklists_data.php?id=<?php echo $task['list_id']; ?>" id="delete_tasklist"><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
+                        <a href="app/pages/controller/tasklists/delete_tasklists_data.php?id=<?php echo $task['list_id']; ?>" onclick="return validation()" id="delete_tasklist_<?php echo $count ?>"><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
                     </td>
                 </tr>
                 <?php } ?>
@@ -78,7 +78,6 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
         </div>
     </div>
 </div>
-
     <script src="app/assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

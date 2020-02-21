@@ -1,14 +1,12 @@
 /*================================
 * CONSTANTS
 * ================================*/
-const DELETE_TASKLIST = document.getElementById('delete_tasklist');
+
 
 /*================================
 * DOM ELEMENTS
 * ================================*/
-DELETE_TASKLIST.onclick = function() {
-    return validation();
-};
+
 
 /*================================
 * Functions

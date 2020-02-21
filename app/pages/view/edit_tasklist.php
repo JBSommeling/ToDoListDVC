@@ -1,5 +1,5 @@
 <?php
-require_once '../../../init.php';
+require_once $_SERVER["DOCUMENT_ROOT"].'/todolistdvc/init.php';
 include ROOTPATH.'/app/pages/controller/tasklists/edit_tasklists_data.php';
 
 require_once ROOTPATH.'/app/pages/template/header.php';
