@@ -65,7 +65,7 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
                 <tbody>
                 <?php foreach ($tasklist as $task) {?>
                 <tr>
-                    <th scope="row"><?php echo $count; $count++ ?></th>
+                    <th scope="row"><?php echo $count; $count++; ?></th>
                     <td><a href="#" class="btn btn-transparent"><?php echo $task['list_name']; ?></a></td>
                     <td>
                         <a href="app/pages/view/edit_tasklist.php?id=<?php echo $task['list_id']; ?>"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
