@@ -1,8 +1,9 @@
 <?php
-include '../../../../init.php';
+define('ROOTPATH', str_replace('\app\pages\controller\tasklists', '', __DIR__));
+require_once ROOTPATH.'/init.php';
 
-$id = $_GET['id'];
+$list_id = $_GET['list_id'];
 
-deleteTasklist($id);
+deleteTasklist($list_id);
 
 header('location: ../../../../index.php');

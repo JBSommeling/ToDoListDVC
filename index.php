@@ -54,6 +54,7 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
             <div class="button-container">
                 <a href="app/pages/view/add_tasklist.php"><button type="button" class="btn text-secondary"><i class="fas fa-plus-circle"></button></i></a>
             </div>
+            <h3>Takenlijsten</h3>
             <table class="table">
                 <thead>
                 <tr>
@@ -63,13 +64,14 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($tasklist as $task) {?>
+                <?php foreach ($tasklist as $tasklist) {?>
                 <tr>
                     <th scope="row"><?php echo $count; $count++; ?></th>
-                    <td><a href="#" class="btn btn-transparent"><?php echo $task['list_name']; ?></a></td>
+                    <td><a href="#" class="btn btn-transparent"><?php echo $tasklist['list_name']; ?></a></td>
                     <td>
-                        <a href="app/pages/view/edit_tasklist.php?id=<?php echo $task['list_id']; ?>"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
-                        <a href="app/pages/controller/tasklists/delete_tasklists_data.php?id=<?php echo $task['list_id']; ?>" onclick="return validation()" id="delete_tasklist_<?php echo $count ?>"><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
+                        <a href="app/pages/view/show_tasks.php?list_id=<?php echo $tasklist['list_id']; ?>"><button type="button" class="btn btn-warning"><i class="fas fa-eye text-white"></i></button></a>
+                        <a href="app/pages/view/edit_tasklist.php?list_id=<?php echo $tasklist['list_id']; ?>"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
+                        <a href="app/pages/controller/tasklists/delete_tasklists_data.php?list_id=<?php echo $tasklist['list_id']; ?>" onclick="return validation()" id="delete_tasklist_<?php echo $count ?>"><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
                     </td>
                 </tr>
                 <?php } ?>

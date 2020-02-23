@@ -4,8 +4,8 @@ $name = "";
 $nameErr = "";
 $validate = false;
 
-$id = $_GET['id'];
-$oldVal = getTasklistById($id);
+$list_id = $_GET['list_id'];
+$oldVal = getTasklistById($list_id);
 
 $fields = array(
     'tasklist_name' => ''
@@ -18,6 +18,6 @@ $fieldErr = array(
 $result = checkFields($fields, $fieldErr);
 
 if ($result['validate']) {
-    editTasklist($id, $result['fields']['tasklist_name']);
+    editTasklist($list_id, $result['fields']['tasklist_name']);
     header('location: ../../../index.php');
 }
