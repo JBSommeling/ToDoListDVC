@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfa97a2e-6cdb-4c17-8b3b-617bf261c8e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/css/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/controller/tasklists/show_tasklists_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/controller/tasklists/show_tasklists_data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/controller/tasks/add_task_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/controller/tasks/add_task_data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/controller/tasks/show_tasks_data.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/database/Tasklists.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/database/Tasklists.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/view/show_tasks.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +73,7 @@
       <workItem from="1582470679253" duration="3443000" />
       <workItem from="1582544705977" duration="5443000" />
       <workItem from="1582550370491" duration="976000" />
-      <workItem from="1582551423025" duration="12030000" />
+      <workItem from="1582551423025" duration="12418000" />
     </task>
     <servers />
   </component>

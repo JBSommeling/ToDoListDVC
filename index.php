@@ -3,7 +3,6 @@ include 'init.php';
 include 'app/pages/controller/tasklists/show_tasklists_data.php';
 
 ?>
-
 <!doctype html>
 <html lang="nl">
     <head>
