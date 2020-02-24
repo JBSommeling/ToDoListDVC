@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 19 feb 2020 om 12:24
+-- Gegenereerd op: 24 feb 2020 om 18:45
 -- Serverversie: 10.4.8-MariaDB
 -- PHP-versie: 7.3.10
 
@@ -38,10 +38,9 @@ CREATE TABLE `tasklists` (
 --
 
 INSERT INTO `tasklists` (`list_id`, `list_name`) VALUES
-(1, 'testlist1'),
-(2, 'testlist2'),
-(3, 'testlist3'),
-(18, 'tester');
+(1, 'testlisttest'),
+(31, 'testlist'),
+(32, 'testlist');
 
 -- --------------------------------------------------------
 
@@ -53,6 +52,7 @@ CREATE TABLE `tasks` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `list_id` bigint(20) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `duration` int(11) NOT NULL,
   `is_done` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -60,10 +60,15 @@ CREATE TABLE `tasks` (
 -- Gegevens worden geëxporteerd voor tabel `tasks`
 --
 
-INSERT INTO `tasks` (`id`, `list_id`, `name`, `is_done`) VALUES
-(1, 1, 'testtask', 1),
-(2, 1, 'testtask2', 1),
-(3, 1, 'testtask3', 0);
+INSERT INTO `tasks` (`id`, `list_id`, `name`, `duration`, `is_done`) VALUES
+(1, 1, 'testtask', 0, 1),
+(2, 1, 'testtask2', 0, 1),
+(3, 1, 'testtask3', 0, 0),
+(6, 31, 'wert', 0, 1),
+(9, 0, 'wert', 0, 1),
+(10, 1, 'wert', 0, 1),
+(11, 31, 'wert', 0, 1),
+(12, 32, 'wert', 0, 1);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -89,13 +94,13 @@ ALTER TABLE `tasks`
 -- AUTO_INCREMENT voor een tabel `tasklists`
 --
 ALTER TABLE `tasklists`
-  MODIFY `list_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `list_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT voor een tabel `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

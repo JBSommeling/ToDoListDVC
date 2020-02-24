@@ -30,5 +30,5 @@ $result = checkFields($fields, $fieldErr);
 
 if ($result['validate']) {
     createTask($_POST['list_id'],$result['fields']['task_name'], $is_done);
-    header('Location: show_tasks.php?list_id='.$_POST['list_id']);
+    header('Location: ../../../index.php');
 }

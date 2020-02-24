@@ -4,8 +4,8 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
 
 ?>
 
-    <!doctype html>
-    <html lang="nl">
+<!doctype html>
+<html lang="nl">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport"
@@ -38,31 +38,65 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
     </nav>
 <div class="container col-12">
     <div class="row">
-        <div class="col-6 list">
-            <div class="button-container">
-                <a href="app/pages/view/add_tasklist.php"><button type="button" class="btn text-secondary"><i class="fas fa-plus-circle"></button></i></a>
+        <div class="col-12 list">
+            <div class="button-container d-inline-block mb-1">
+                <a href="app/pages/view/add_tasklist.php"><button type="button" class="btn btn-secondary"><i class="fas fa-plus"></i></button></i></a>
             </div>
-            <h3>Takenlijsten</h3>
+            <h3 class="d-inline-block">Takenlijsten</h3>
             <table class="table">
                 <thead>
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Naam</th>
-                    <th scope="col">Acties</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($tasklist as $tasklist) {?>
-                <tr>
-                    <th scope="row"><?php echo $count; $count++; ?></th>
-                    <td><a href="#" class="btn btn-transparent"><?php echo $tasklist['list_name']; ?></a></td>
-                    <td>
-                        <a href="app/pages/view/show_tasks.php?list_id=<?php echo $tasklist['list_id']; ?>"><button type="button" class="btn btn-warning"><i class="fas fa-eye text-white"></i></button></a>
-                        <a href="app/pages/view/edit_tasklist.php?list_id=<?php echo $tasklist['list_id']; ?>"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
-                        <a href="app/pages/controller/tasklists/delete_tasklists_data.php?list_id=<?php echo $tasklist['list_id']; ?>" onclick="return validation()" id="delete_tasklist_<?php echo $count ?>"><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
-                    </td>
-                </tr>
-                <?php } ?>
+                <?php foreach ($filtered_array as $tasklist) {?>
+                    <tr>
+                        <th scope="row"><?php echo $count; ?></th>
+                        <td><h3 class="d-inline-block mr-4"><?php echo $tasklist['list_name']; ?></h3>
+                            <div class="mb-1 d-inline-block">
+                                <a href="app/pages/view/add_task.php?list_id=<?php echo $tasklist['list_id']; ?>"><button type="button" class="btn btn-dark"><i class="fas fa-plus"></i></button></a>
+                                <a href="app/pages/view/edit_tasklist.php?list_id=<?php echo $tasklist['list_id']; ?>"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
+                                <a href="app/pages/controller/tasklists/delete_tasklists_data.php?list_id=<?php echo $tasklist['list_id']; ?>" onclick="return validation()" id="delete_tasklist_<?php echo $count ?>"><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
+                            </div>
+                            <?php if ($tasklist['tasks'][0]['task_id'] != null){ ?>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Naam</th>
+                                    <th scope="col">Duur (min)</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Acties</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php for ($taskIndex = 0; $taskIndex < count($tasklist['tasks']); $taskIndex++){ ?>
+                                    <tr>
+                                        <td><?php echo $tasklist['tasks'][$taskIndex]['task_name'] ?></td>
+                                        <td><?php echo $tasklist['tasks'][$taskIndex]['duration'] ?></td>
+                                        <td><?php
+                                            if($tasklist['tasks'][$taskIndex]['is_done'] == 1){
+                                                echo 'Voltooid';
+                                            }
+                                            else {
+                                                echo 'Onvoltooid';
+                                            }
+                                            ?>
+                                        </td>
+                                        <td>
+                                            <a href="app/pages/view/show_task.php?task_id=<?php echo $tasklist['tasks'][$taskIndex]['task_id']; ?>"><button type="button" class="btn btn-warning"><i class="fas fa-eye text-white"></i></button></a>
+                                            <a href="#"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
+                                            <a href="#" onclick="return validation()" id="delete_tasklist_<?php echo $count ?>"><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
+                                </tbody>
+                            </table>
+                            <?php } ?>
+                        </td>
+                    </tr>
+                    <?php $count++;} ?>
                 </tbody>
             </table>
         </div>

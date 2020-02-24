@@ -10,8 +10,14 @@ function getTasklists(){
     return $stmt->fetchAll();
 }
 
+// Function to get the Tasklist-list with tasks belonging to Tasklist-list from database.
 function getTasklistsAndTasks(){
-    
+    $conn = ConnectToDatabase();
+
+    $sql = 'SELECT TL.list_id, TL.list_name, T.name, T.duration, T.is_done, T.id FROM tasklists as TL LEFT JOIN tasks as T ON TL.list_id = T.list_id';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
 }
 
 /* Function to get the Tasklist by Id.
