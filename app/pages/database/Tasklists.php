@@ -10,6 +10,10 @@ function getTasklists(){
     return $stmt->fetchAll();
 }
 
+function getTasklistsAndTasks(){
+    
+}
+
 /* Function to get the Tasklist by Id.
 @param - $id = the id of the to be fetched tasklist*/
 function getTasklistById($id){

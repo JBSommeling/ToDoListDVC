@@ -38,7 +38,7 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
     </nav>
 <div class="container col-12">
     <div class="row">
-        <div class="col-12 col-md-8 col-lg-5 list">
+        <div class="col-6 list">
             <div class="button-container">
                 <a href="app/pages/view/add_tasklist.php"><button type="button" class="btn text-secondary"><i class="fas fa-plus-circle"></button></i></a>
             </div>

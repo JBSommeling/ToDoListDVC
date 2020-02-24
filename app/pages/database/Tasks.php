@@ -1,8 +1,8 @@
 <?php
 
 /* Function to get tasks belonging to Tasklists
-@param - lisT_id = list id of tasklist */
-function getTasks($list_id){
+@param - list_id = list id of tasklist */
+function getTasksByListId($list_id){
     $conn = ConnectToDatabase();
 
     $sql = 'SELECT * FROM tasks WHERE list_id = :list_id';

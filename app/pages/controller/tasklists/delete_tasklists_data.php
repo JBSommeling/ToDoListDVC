@@ -6,4 +6,5 @@ $list_id = $_GET['list_id'];
 
 deleteTasklist($list_id);
 
+
 header('location: ../../../../index.php');
