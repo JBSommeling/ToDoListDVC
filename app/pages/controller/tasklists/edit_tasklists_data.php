@@ -1,7 +1,5 @@
 <?php
 
-$name = "";
-$nameErr = "";
 $validate = false;
 
 $list_id = $_GET['list_id'];

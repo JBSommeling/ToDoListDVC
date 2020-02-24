@@ -1,6 +1,5 @@
 <?php
-$name = "";
-$nameErr = "";
+
 $validate = false;
 
 $fields = array(

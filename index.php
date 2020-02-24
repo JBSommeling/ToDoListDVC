@@ -33,18 +33,6 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
                 <li class="nav-item">
                     <a class="nav-link" href="index.php" onclick="">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">link</a>
-                </li>
             </ul>
         </div>
     </nav>

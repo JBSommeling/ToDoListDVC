@@ -20,5 +20,5 @@ require_once ROOTPATH.'/app/pages/template/header.php';
 </div>
 
 <?php
-require_once ROOTPATH.'app/pages/template/footer.php';
+require_once ROOTPATH.'/app/pages/template/footer.php';
 ?>
