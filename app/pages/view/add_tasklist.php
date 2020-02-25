@@ -6,7 +6,7 @@ include ROOTPATH.'/app/pages/controller/tasklists/add_tasklists_data.php';
 require_once ROOTPATH.'/app/pages/template/header.php';
 ?>
 
-<div class="col-12 col-md-8 col-lg-4 list">
+<div class="col-4 offset-4 centered-list">
     <h3>Lijst toevoegen</h3>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <div class="form-group">

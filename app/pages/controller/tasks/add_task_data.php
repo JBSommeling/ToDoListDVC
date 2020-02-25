@@ -28,7 +28,19 @@ $fieldErr = array(
 
 $result = checkFields($fields, $fieldErr);
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Checks if the form is empty.
+        if (empty($_POST['task_duration'])) {
+            $result['errors']['task_duration'] = 'Dit is een verplicht veld!';
+            $result['validate']=  false;
+        }
+        else {
+            $result['fields']['task_duration'] = formVal($_POST['task_duration']);
+            $result['errors']['task_duration'] = '';
+        }
+}
+
 if ($result['validate']) {
-    createTask($_POST['list_id'],$result['fields']['task_name'], $is_done);
+    createTask($_POST['list_id'],$result['fields']['task_name'], $result['fields']['task_duration'], $is_done);
     header('Location: ../../../index.php');
 }

@@ -26,10 +26,10 @@ function getTask($id){
 @param - $list_id = list_id of tasklist.
 @param - $task_name = name of task.
 @param - $is_done = whether task is completed or not.*/
-function createTask($list_id, $task_name, $is_done){
+function createTask($list_id, $task_name, $duration, $is_done){
     $conn = ConnectToDatabase();
 
-    $sql = 'INSERT INTO tasks(list_id, name, is_done) VALUES ( :list_id, :name, :is_done)';
+    $sql = 'INSERT INTO tasks(list_id, name, duration, is_done) VALUES ( :list_id, :name, :duration, :is_done)';
     $stmt = $conn->prepare($sql);
-    $stmt->execute(['list_id' => $list_id, ':name' => $task_name, ':is_done' => $is_done]);
+    $stmt->execute(['list_id' => $list_id, ':name' => $task_name, ':duration' => $duration, ':is_done' => $is_done]);
 }
