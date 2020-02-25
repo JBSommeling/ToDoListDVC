@@ -61,7 +61,14 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
                     <tbody>
                     <?php for ($taskIndex = 0; $taskIndex < count($tasklist['tasks']); $taskIndex++){ ?>
                         <tr>
-                            <td><?php echo $tasklist['tasks'][$taskIndex]['task_name'] ?></td>
+                            <td><?php
+                                if ($tasklist['tasks'][$taskIndex]['is_done'] == 1){
+                                    echo '<strike>'.$tasklist['tasks'][$taskIndex]['task_name'].'</strike>';
+                                }
+                                else{
+                                    echo $tasklist['tasks'][$taskIndex]['task_name'];
+                                } ?>
+                            </td>
                             <td><?php echo $tasklist['tasks'][$taskIndex]['duration'] ?></td>
                             <td><?php
                                 if($tasklist['tasks'][$taskIndex]['is_done'] == 1){
@@ -74,7 +81,7 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
                             </td>
                             <td>
                                 <a href="app/pages/view/show_task.php?task_id=<?php echo $tasklist['tasks'][$taskIndex]['task_id']; ?>"><button type="button" class="btn btn-warning"><i class="fas fa-eye text-white"></i></button></a>
-                                <a href="#"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
+                                <a href="app/pages/view/edit_task.php?task_id=<?php echo $tasklist['tasks'][$taskIndex]['task_id']; ?>"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
                                 <a href="#" onclick="return validation()" id="delete_tasklist_<?php echo $count ?>"><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
                             </td>
                         </tr>

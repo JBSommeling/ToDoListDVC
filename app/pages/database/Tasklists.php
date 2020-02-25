@@ -44,7 +44,7 @@ function createTasklist($name){
 /* Function to edit a tasklist
 @param - id = id of the tasklist to be edited.
 @param - name = new name of the to be edited tasklist*/
-function editTasklist($id, $name){
+function updateTasklist($id, $name){
     $conn = ConnectToDatabase();
 
     $sql = 'UPDATE tasklists SET list_name = :name WHERE list_id = :id';

@@ -16,6 +16,6 @@ $fieldErr = array(
 $result = checkFields($fields, $fieldErr);
 
 if ($result['validate']) {
-    editTasklist($list_id, $result['fields']['tasklist_name']);
+    updateTasklist($list_id, $result['fields']['tasklist_name']);
     header('location: ../../../index.php');
 }

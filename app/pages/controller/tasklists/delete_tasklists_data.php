@@ -5,6 +5,6 @@ require_once ROOTPATH.'/init.php';
 $list_id = $_GET['list_id'];
 
 deleteTasklist($list_id);
-
+deleteTasksBelongingToTasklist($list_id);
 
 header('location: ../../../../index.php');

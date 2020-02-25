@@ -33,3 +33,21 @@ function createTask($list_id, $task_name, $duration, $is_done){
     $stmt = $conn->prepare($sql);
     $stmt->execute(['list_id' => $list_id, ':name' => $task_name, ':duration' => $duration, ':is_done' => $is_done]);
 }
+
+function updateTask($task_name, $duration, $is_done, $id){
+    $conn = ConnectToDatabase();
+
+    $sql = 'UPDATE tasks SET name = :name, duration = :duration, is_done = :is_done WHERE id = :id';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([':name' => $task_name, ':duration' => $duration, ':is_done' => $is_done, ':id' => $id]);
+}
+
+/* Function to delete Tasks belonging to given Tasklist
+@param - $list_id = lisT_id of tasklist*/
+function deleteTasksBelongingToTasklist($list_id){
+    $conn = ConnectToDatabase();
+
+    $sql = 'DELETE FROM tasks WHERE list_id = :list_id';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(['list_id' => $list_id]);
+}
