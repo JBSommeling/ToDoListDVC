@@ -34,3 +34,39 @@ function formVal($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
+/* Function to parse an array from database input. This creates a tasklist with tasks.
+@param - $arrayFromDatabase = the array fetched from database.*/
+function createArrayWithListsAndTasks($arrayFromDatabase)
+{
+    $filtered_array = array();
+
+    foreach ($arrayFromDatabase as $row) {
+
+        // Initiate record if is not already initiated
+        if (!isset($filtered_array[$row['list_id']])) {
+            $filtered_array[$row['list_id']] = array(
+                'list_id' => $row['list_id'],
+                'list_name' => $row['list_name'],
+                'tasks' => array()
+            );
+        }
+
+        // Add tasks
+        $filtered_array[$row['list_id']]['tasks'][] = array(
+            'task_id' => $row['id'],
+            'task_name' => $row['name'],
+            'duration' => $row['duration'],
+            'is_done' => $row['is_done']
+        );
+    }
+
+    // To remove list_id from $filtered_array key names.
+    $filtered_array = array_values($filtered_array);
+
+    /* To sort created and filtered array by value so that there will always be a certain order in the array.
+    This is very useful when ordering by status.*/
+    asort($filtered_array);
+
+    return $filtered_array;
+}

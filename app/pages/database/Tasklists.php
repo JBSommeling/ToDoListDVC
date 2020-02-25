@@ -20,6 +20,42 @@ function getTasklistsAndTasks(){
     return $stmt->fetchAll();
 }
 
+function getTasklistsOrderedASC(){
+    $conn = ConnectToDatabase();
+
+    $sql = 'SELECT TL.list_id, TL.list_name, T.name, T.duration, T.is_done, T.id FROM tasklists as TL LEFT JOIN tasks as T ON TL.list_id = T.list_id ORDER BY T.is_done ASC';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
+function getTasklistsOrderedDESC(){
+    $conn = ConnectToDatabase();
+
+    $sql = 'SELECT TL.list_id, TL.list_name, T.name, T.duration, T.is_done, T.id FROM tasklists as TL LEFT JOIN tasks as T ON TL.list_id = T.list_id ORDER BY T.is_done ASC';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
+function getTasklistFilteredByIsDone(){
+    $conn = ConnectToDatabase();
+
+    $sql = 'SELECT TL.list_id, TL.list_name, T.name, T.duration, T.is_done, T.id FROM tasklists as TL LEFT JOIN tasks as T ON TL.list_id = T.list_id WHERE T.is_done = 1';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
+function getTasklistFilteredByDuration(){
+    $conn = ConnectToDatabase();
+
+    $sql = 'SELECT TL.list_id, TL.list_name, T.name, T.duration, T.is_done, T.id FROM tasklists as TL LEFT JOIN tasks as T ON TL.list_id = T.list_id WHERE T.duration >= 5';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
 /* Function to get the Tasklist by Id.
 @param - $id = the id of the to be fetched tasklist*/
 function getTasklistById($id){

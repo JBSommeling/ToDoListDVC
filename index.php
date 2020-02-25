@@ -24,14 +24,20 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="app/pages/view/add_tasklist.php"><button type="button" class="btn btn-warning"><i class="fas fa-plus"></i></button></i></a>
+    <div class="navbar-brand">
+        <a href="app/pages/view/add_tasklist.php"><button type="button" class="btn btn-warning"><i class="fas fa-plus"></i></button></i></a>
+        <a href="app/pages/view/sort_tasklist.php"><button type="button" class="btn btn-danger">Sorteer status ASC</button></a>
+        <a href="app/pages/view/sort_tasklist.php"><button type="button" class="btn btn-danger">Sorteer status DESC</button></a>
+        <a href="app/pages/view/filter_tasklist.php"><button type="button" class="btn btn-success">Filter status</button></a>
+        <a href="app/pages/view/filter_tasklist.php"><button type="button" class="btn btn-success">Filter duur</button></a>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
 
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link" href="index.php" onclick="">Home</a>
             </li>
@@ -59,7 +65,7 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
                     </tr>
                     </thead>
                     <tbody>
-                    <?php for ($taskIndex = 0; $taskIndex < count($tasklist['tasks']); $taskIndex++){ ?>
+                    <?php for ($taskIndex = 0; $taskIndex < count($tasklist['tasks']); $taskIndex++){?>
                         <tr>
                             <td><?php
                                 if ($tasklist['tasks'][$taskIndex]['is_done'] == 1){
