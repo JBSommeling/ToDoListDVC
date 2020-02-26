@@ -20,7 +20,8 @@ function getTasklistsAndTasks(){
     return $stmt->fetchAll();
 }
 
-function getTasklistsOrderedASC(){
+// Function to get the Tasklist-list with tasks belonging to Tasklist-list from database ordered by is_done.
+function getTasklistsOrdered(){
     $conn = ConnectToDatabase();
 
     $sql = 'SELECT TL.list_id, TL.list_name, T.name, T.duration, T.is_done, T.id FROM tasklists as TL LEFT JOIN tasks as T ON TL.list_id = T.list_id ORDER BY T.is_done ASC';
@@ -29,15 +30,7 @@ function getTasklistsOrderedASC(){
     return $stmt->fetchAll();
 }
 
-function getTasklistsOrderedDESC(){
-    $conn = ConnectToDatabase();
-
-    $sql = 'SELECT TL.list_id, TL.list_name, T.name, T.duration, T.is_done, T.id FROM tasklists as TL LEFT JOIN tasks as T ON TL.list_id = T.list_id ORDER BY T.is_done ASC';
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    return $stmt->fetchAll();
-}
-
+// Function to get the Tasklist-list with tasks belonging to Tasklist-list from database filtered by is_done = 1.
 function getTasklistFilteredByIsDone(){
     $conn = ConnectToDatabase();
 
@@ -47,6 +40,17 @@ function getTasklistFilteredByIsDone(){
     return $stmt->fetchAll();
 }
 
+// Function to get the Tasklist-list with tasks belonging to Tasklist-list from database filtered by is_done = 1.
+function getTasklistFilteredByIsNotDone(){
+    $conn = ConnectToDatabase();
+
+    $sql = 'SELECT TL.list_id, TL.list_name, T.name, T.duration, T.is_done, T.id FROM tasklists as TL LEFT JOIN tasks as T ON TL.list_id = T.list_id WHERE T.is_done = 0';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
+// Function to get the Tasklist-list with tasks belonging to Tasklist-list from database filtered by duration equals or is longer than 5 min.
 function getTasklistFilteredByDuration(){
     $conn = ConnectToDatabase();
 
