@@ -90,4 +90,20 @@ $("document").ready(function(){
             }
         });
     });
+
+    $("#filterDur").click(function(e){
+
+        e.preventDefault();
+        $.ajax({
+            url: '' ,
+            data:{name: ''},
+            type:'POST',
+            success: function(data){
+                $("#container").load('app/pages/view/filter_tasklistDUR.php');
+            },
+            error: function (data) {
+                alert('error');
+            }
+        });
+    });
 });

@@ -42,8 +42,18 @@ function updateTask($task_name, $duration, $is_done, $id){
     $stmt->execute([':name' => $task_name, ':duration' => $duration, ':is_done' => $is_done, ':id' => $id]);
 }
 
+/* Function to delete tasks by id.
+@param - $task_id = task_id of task*/
+function deleteTask($task_id){
+    $conn = ConnectToDatabase();
+
+    $sql = 'DELETE FROM tasks WHERE id = :task_id';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(['task_id' => $task_id]);
+}
+
 /* Function to delete Tasks belonging to given Tasklist
-@param - $list_id = lisT_id of tasklist*/
+@param - $list_id = list_id of tasklist*/
 function deleteTasksBelongingToTasklist($list_id){
     $conn = ConnectToDatabase();
 

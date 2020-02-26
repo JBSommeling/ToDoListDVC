@@ -30,7 +30,7 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
         <a id="sortDESC" href="#"><button type="button" class="btn btn-danger">Sorteer onvoltooid</button></a>
         <a id="filterCompl" href="#"><button type="button" class="btn btn-success">Filter voltooid</button></a>
         <a id="filterInCompl" href="#"><button type="button" class="btn btn-success">Filter onvoltooid</button></a>
-        <a href="app/pages/controller/tasklists/filter_tasklist_data.php"><button type="button" class="btn btn-secondary">Filter duur</button></a>
+        <a id="filterDur" href="#"><button type="button" class="btn btn-secondary">Filter duur</button></a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -89,7 +89,7 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
                             <td>
                                 <a href="app/pages/view/show_task.php?task_id=<?php echo $tasklist['tasks'][$taskIndex]['task_id']; ?>"><button type="button" class="btn btn-warning"><i class="fas fa-eye text-white"></i></button></a>
                                 <a href="app/pages/view/edit_task.php?task_id=<?php echo $tasklist['tasks'][$taskIndex]['task_id']; ?>"><button type="button" class="btn btn-secondary d-inline-block" ><i class="fas fa-edit"></i></button></a>
-                                <a href="#" onclick="return validation()" id="delete_tasklist_<?php echo $count ?>"><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
+                                <a href="app/pages/controller/tasks/delete_task_data.php?task_id=<?php echo $tasklist['tasks'][$taskIndex]['task_id']; ?>" onclick="return validation()" id="delete_tasklist_<?php echo $count ?>"><button type="button" class="btn btn-danger d-inline-block"><i class="fas fa-trash-alt"></i></button></a>
                             </td>
                         </tr>
                     <?php } ?>
