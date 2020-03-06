@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dfa97a2e-6cdb-4c17-8b3b-617bf261c8e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/database/Tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/database/Tasks.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +39,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/ToDoList" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
@@ -82,6 +80,7 @@
       <workItem from="1582652025461" duration="2666000" />
       <workItem from="1582664882027" duration="5055000" />
       <workItem from="1582701641404" duration="4460000" />
+      <workItem from="1583516103688" duration="465000" />
     </task>
     <servers />
   </component>
