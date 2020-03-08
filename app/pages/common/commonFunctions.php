@@ -52,7 +52,8 @@ function createArrayWithListsAndTasks($arrayFromDatabase)
             );
         }
 
-        // Add tasks to initiated array
+        /* Add tasks to initiated array.
+        Within 'tasks' array, another array is added*/
         $filtered_array[$row['list_id']]['tasks'][] = array(
             'task_id' => $row['id'],
             'task_name' => $row['name'],
