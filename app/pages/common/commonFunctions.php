@@ -43,7 +43,7 @@ function createArrayWithListsAndTasks($arrayFromDatabase)
 
     foreach ($arrayFromDatabase as $row) {
 
-        // Initiate record if is not already initiated
+        // Initiate record if it is not already initiated, to avoid duplicates.
         if (!isset($filtered_array[$row['list_id']])) {
             $filtered_array[$row['list_id']] = array(
                 'list_id' => $row['list_id'],
@@ -52,7 +52,7 @@ function createArrayWithListsAndTasks($arrayFromDatabase)
             );
         }
 
-        // Add tasks
+        // Add tasks to initiated array
         $filtered_array[$row['list_id']]['tasks'][] = array(
             'task_id' => $row['id'],
             'task_name' => $row['name'],
