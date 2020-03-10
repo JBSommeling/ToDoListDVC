@@ -66,7 +66,8 @@ function createArrayWithListsAndTasks($arrayFromDatabase)
     $filtered_array = array_values($filtered_array);
 
     /* To sort created and filtered array by value so that there will always be a certain order in the array.
-    This is very useful when ordering by status.*/
+    This is very useful when ordering by status.
+    asort - to sort associative arrays in ascending order, according to the value*/
     asort($filtered_array);
 
     return $filtered_array;

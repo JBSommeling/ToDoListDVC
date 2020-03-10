@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dfa97a2e-6cdb-4c17-8b3b-617bf261c8e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DB/todolist_dvc (1).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DB/todolist_dvc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/DB/todolist_dvc.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/common/commonFunctions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/common/commonFunctions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pages/controller/tasklists/sort_tasklistASC_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/controller/tasklists/sort_tasklistASC_data.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pages/controller/tasklists/sort_tasklistDESC_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/controller/tasklists/sort_tasklistDESC_data.php" afterDir="false" />
     </list>
@@ -90,6 +88,7 @@
       <workItem from="1583833410474" duration="27000" />
       <workItem from="1583848392477" duration="26000" />
       <workItem from="1583848504313" duration="987000" />
+      <workItem from="1583849587541" duration="270000" />
     </task>
     <servers />
   </component>
@@ -126,10 +125,10 @@
     <state x="635" y="352" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582027801171" />
     <state x="635" y="352" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1582119038464" />
     <state x="794" y="444" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582548705173" />
-    <state x="525" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1583848504934">
+    <state x="525" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1583849587396">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="525" y="273" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583848504934" />
+    <state x="525" y="273" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583849587396" />
     <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583566486117" />
     <state x="1920" y="0" width="1557" height="1025" key="dock-window-1" timestamp="1582652180956">
       <screen x="1920" y="0" width="1920" height="1040" />
