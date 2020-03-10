@@ -1,6 +1,6 @@
 <?php
 $result = getTasklistsOrdered();
 
-sort($result);
+rsort($result);
 
 $filtered_array = createArrayWithListsAndTasks($result);
