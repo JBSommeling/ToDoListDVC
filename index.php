@@ -1,4 +1,10 @@
 <?php
+
+//feedback Danny van der Weijde 11/3/2020
+//Bij de lijsten en taken zou het misschien fijn zijn dat je nummers in de naam kan gebruiken.
+//Het zou fijn zijn als der een unfliter button is
+//Code is voor de rest netjes goed overzichtelijk zoals je front-end applicatie en het is ook goed dat er veel comments bij om uit te leggen wat functions of zelf gelijken dingen doen.
+
 include 'init.php';
 include 'app/pages/controller/tasklists/show_tasklists_data.php';
 
