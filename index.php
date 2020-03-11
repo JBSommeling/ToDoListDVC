@@ -46,7 +46,7 @@ include 'app/pages/controller/tasklists/show_tasklists_data.php';
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="index.php" onclick="">Home</a>
+                <a class="nav-link" href="index.php" onclick="">Reset / Unfilter</a>
             </li>
         </ul>
     </div>
